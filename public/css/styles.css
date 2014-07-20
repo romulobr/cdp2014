@@ -190,7 +190,7 @@ input, select {
     list-style-type: none;
 }
 
-.menu ul li a {
+.menu ul li a{
     font-family: 'Rokkitt', serif;
     display: block;
     width: 200px;
@@ -199,7 +199,10 @@ input, select {
     border-style:solid;
     border-width: 2px;
     border-color: white;
+    text-decoration: none;
+    color:black;
 }
+
 
 .menu ul li a:hover{
     font-family: 'Rokkitt', serif;
