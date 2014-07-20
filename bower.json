@@ -1,0 +1,17 @@
+{
+  "name": "pr2014",
+  "version": "0.0.0",
+  "authors": [
+    "romulobr <romulobr@gmail.com>"
+  ],
+  "description": "performance review app",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/components",
+    "test",
+    "tests"
+  ]
+}

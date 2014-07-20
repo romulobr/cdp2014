@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '–g', 'gulp' ]
+2 info using npm@1.4.4
+3 info using node@v0.8.14
+4 verbose cache add [ '–g', null ]
+5 verbose cache add name=undefined spec="–g" args=["–g",null]
+6 verbose parsed url { pathname: '–g', path: '–g', href: '–g' }
+7 verbose cache add [ 'gulp', null ]
+8 verbose cache add name=undefined spec="gulp" args=["gulp",null]
+9 verbose parsed url { pathname: 'gulp', path: 'gulp', href: 'gulp' }
+10 silly lockFile 51e00793-g –g
+11 verbose lock –g /Users/rsantos/.npm/51e00793-g.lock
+12 silly lockFile 9750c68d-gulp gulp
+13 verbose lock gulp /Users/rsantos/.npm/9750c68d-gulp.lock
+14 silly lockFile 51e00793-g –g
+15 silly lockFile 51e00793-g –g
+16 verbose addNamed [ '–g', '' ]
+17 verbose addNamed [ null, '*' ]
+18 silly lockFile 72e0e7f9-g –g@
+19 verbose lock –g@ /Users/rsantos/.npm/72e0e7f9-g.lock
+20 silly lockFile 9750c68d-gulp gulp
+21 silly lockFile 9750c68d-gulp gulp
+22 verbose addNamed [ 'gulp', '' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 72f4391e-gulp gulp@
+25 verbose lock gulp@ /Users/rsantos/.npm/72f4391e-gulp.lock
+26 silly addNameRange { name: '–g', range: '*', hasData: false }
+27 verbose url raw –g
+28 verbose url resolving [ 'https://registry.npmjs.org/', './%E2%80%93g' ]
+29 verbose url resolved https://registry.npmjs.org/%E2%80%93g
+30 info trying registry request attempt 1 at 15:42:53
+31 http GET https://registry.npmjs.org/%E2%80%93g
+32 silly addNameRange { name: 'gulp', range: '*', hasData: false }
+33 verbose url raw gulp
+34 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
+35 verbose url resolved https://registry.npmjs.org/gulp
+36 info trying registry request attempt 1 at 15:42:53
+37 verbose etag "BV21X0DE400FSYX8JCCWG1M3Y"
+38 http GET https://registry.npmjs.org/gulp
+39 http 404 https://registry.npmjs.org/%E2%80%93g
+40 silly registry.get cb [ 404,
+40 silly registry.get   { date: 'Sun, 20 Jul 2014 19:41:12 GMT',
+40 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+40 silly registry.get     'content-type': 'application/json',
+40 silly registry.get     'cache-control': 'max-age=0',
+40 silly registry.get     'content-length': '52',
+40 silly registry.get     'accept-ranges': 'bytes',
+40 silly registry.get     via: '1.1 varnish',
+40 silly registry.get     age: '0',
+40 silly registry.get     'x-served-by': 'cache-iad2124-IAD',
+40 silly registry.get     'x-cache': 'MISS',
+40 silly registry.get     'x-cache-hits': '0',
+40 silly registry.get     'x-timer': 'S1405885272.469227,VS0,VE102',
+40 silly registry.get     'keep-alive': 'timeout=10, max=50',
+40 silly registry.get     connection: 'Keep-Alive' } ]
+41 silly lockFile 72e0e7f9-g –g@
+42 silly lockFile 72e0e7f9-g –g@
+43 error 404 '%E2%80%93g' is not in the npm registry.
+43 error 404 You should bug the author to publish it
+43 error 404
+43 error 404 Note that you can also install from a
+43 error 404 tarball, folder, or http url, or git url.
+44 error System Darwin 12.5.0
+45 error command "node" "/usr/local/bin/npm" "install" "–g" "gulp"
+46 error cwd /Users/rsantos/dev/pr2014
+47 error node -v v0.8.14
+48 error npm -v 1.4.4
+49 error code E404
+50 verbose exit [ 1, true ]
