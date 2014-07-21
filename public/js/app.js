@@ -77,10 +77,6 @@
 		createSkillImprovement('testing','Testing strategies','P2', 'medium', 'high'),
 		
 		createSkillImprovement('soft','Communication','P2', 'low', 'medium'),
-		createSkillImprovement('soft','Facilitation','P2', 'low', 'medium'),
-		createSkillImprovement('soft','Influence','P2', 'low', 'medium'),
-		createSkillImprovement('soft','Negotiation','P2', 'low', 'medium'),
-		createSkillImprovement('soft','Planning','P2', 'low', 'medium'),
 		createSkillImprovement('soft','Presenting','P2', 'low', 'medium'),
 		createSkillImprovement('soft','Problem Solving','P2', 'low', 'medium'),
 		createSkillImprovement('soft','Questioning','P2', 'low', 'medium'),
