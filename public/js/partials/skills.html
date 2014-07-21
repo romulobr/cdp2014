@@ -1,1 +1,8 @@
-<h1>Skills - Nothing to see here (yet!)</h1>
+<div ng-controller = "SkillController as controller" class="skills-info">
+	<ul>
+		<li ng-repeat="skill in controller.skills">
+			{{skill.technology}}
+			<progress max="100" value="{{skill.after}}" class="html5">
+		</li>
+	</ul>
+</div>
