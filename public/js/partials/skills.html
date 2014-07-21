@@ -1,8 +1,12 @@
 <div ng-controller = "SkillController as controller" class="skills-info">
 	<ul>
-		<li ng-repeat="skill in controller.skills">
+		<li ng-repeat="skill in controller.skills" class="{{skill.category}}">
 			{{skill.technology}}
-			<progress max="100" value="{{skill.after}}" class="html5">
+			<progress max="100" value="{{skill.before}}" class="before">
+			</progress>
+			<br>			
+			<progress max="100" value="{{skill.after}}" class="after">
+			</progress>
 		</li>
 	</ul>
 </div>
