@@ -1,4 +1,11 @@
 <div ng-controller = "SkillController as controller" class="skills-info">
+	<div class="legend">		
+		<div class="coding"> Development</div>
+		<div class="testing"> Testing</div>
+		<div class="soft"> Soft/People Skills</div>
+		<div class="ux"> Ux</div>
+		<div class="language"> Languages</div>
+	</div>
 	<ul>
 		<li ng-repeat="skill in controller.skills" class="{{skill.category}}">
 			{{skill.technology}}
