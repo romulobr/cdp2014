@@ -23,6 +23,9 @@
 	      when('/feedbacks', {
 	        templateUrl: 'js/feedbacks/list.html'
 	      }).
+	      when('/actions', {
+	        templateUrl: 'js/actions/list.html'
+	      }).
 	      otherwise({
 	        redirectTo: '/'
 	      });
@@ -31,15 +34,20 @@
 	var menuItems = [{
 		title: 'Skills',
 		route: '/skills'
+	},	
+	{
+		title: 'Feedbacks',
+		route: '/feedbacks'
+	},
+	{
+		title: 'Actions',
+		route: '/actions'
 	},
 	{
 		title: 'Achievements',
 		route: '/achievements'
-	},
-	{
-		title: 'Feedbacks',
-		route: '/feedbacks'
-	}];
+	}
+	];
 	
 	app.controller('NavigationController', ['allSkills', function (allSkills){
 		this.menuItems = menuItems;
