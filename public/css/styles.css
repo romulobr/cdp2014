@@ -253,3 +253,31 @@ progress[value]::-webkit-progress-value {
     border-radius: 2px; 
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
+
+.animated-transition {
+  position:relative;
+}
+
+.animated-transition.ng-enter, .animated-transition.ng-leave {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+  top:0;
+}
+
+.animated-transition.ng-enter {
+  top:0;
+  z-index:100;
+  opacity:0;
+}
+.animated-transition.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.animated-transition.ng-leave {
+  opacity:1;
+}
+
+.animated-transition.ng-leave.ng-leave-active {
+  opacity:0;
+  height: 0;
+}

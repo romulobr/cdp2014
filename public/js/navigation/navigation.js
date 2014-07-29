@@ -1,7 +1,7 @@
 (function() {
-	var app = angular.module('pr2014', ['ngRoute','skills']);
+	var app = angular.module('pr2014', ['ngRoute','ngAnimate','skills']);
 	var partials = {
-		home: '/js/partials/home.html',
+		home: '/js/navigation/home.html',
 		achievements: '/js/partials/achievements.html',
 		feedbacks: '/js/partials/feedbacks.html',
 		skills: '/js/partials/skills.html'
@@ -14,14 +14,14 @@
 	        templateUrl: partials.home
 	      }).
 	      when('/skills', {
-	        templateUrl: partials.skills,
+	        templateUrl: 'js/skills/list.html',
 	        controller: 'SkillController'
 	      }).
 	      when('/achievements', {
-	        templateUrl: partials.achievements
+	        templateUrl: 'js/achievements/list.html'
 	      }).	      
 	      when('/feedbacks', {
-	        templateUrl: partials.feedbacks
+	        templateUrl: 'js/feedbacks/list.html'
 	      }).
 	      otherwise({
 	        redirectTo: '/'
@@ -41,8 +41,9 @@
 		route: '/feedbacks'
 	}];
 	
-	app.controller('NavigationController', function (){
+	app.controller('NavigationController', ['allSkills', function (allSkills){
 		this.menuItems = menuItems;
-	});
+		console.log(allSkills);
+	}]);
 
 })();
