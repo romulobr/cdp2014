@@ -1,7 +1,7 @@
 <div ng-controller = "FeedbackController as controller" class="skills-info">
 <div ng-repeat="feedback in controller.feedbacks" class="feedback">
 	<div class="feedback-img-containner">
-		<img ng-src="/img/people/{{feedback.picture}}.jpg"/>
+		<a href="{{feedback.url}}" target="_blank"> <img ng-src="/img/people/{{feedback.picture}}.jpg"/> </a>
 	</div>
 	<b>{{feedback.author}}</b> <spam class="small">({{feedback.description}})</spam>
 	<div class="feedback-content" ng-repeat="content in feedback.content"> 
