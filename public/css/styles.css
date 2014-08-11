@@ -30,6 +30,11 @@ time, mark, audio, video {
 
 body {
     line-height:1;
+    /*background-image: url(/images/tree.jpg);*/
+    /*background-size: 900px;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: bottom right;*/
+
 }
 
 article,aside,details,figcaption,figure,
@@ -338,3 +343,15 @@ progress[value]::-webkit-progress-value {
     display: block;
     float: left;
 }
+
+#footer {
+    position:fixed;
+    right:0;
+    bottom:0;
+    margin:0;
+    width:75%;
+    height:75%;
+    background:url(../images/tree.jpg) no-repeat bottom right;
+    background-size:100%;
+}
+#footer img {width:100%;}
