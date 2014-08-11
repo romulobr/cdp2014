@@ -1,10 +1,16 @@
 <h1>Achievements</h1>
 
-palestrar no fisl
-vídeos youtube
-hangout OO imasters
-app open source java script
-app open source android
-menor aprendiz
-level up POA
-palestra aceleradora
+<div ng-controller="AchievementController as controller">
+        <div ng-repeat="achievement in controller.achievements" class="col-sm-4">
+                <a href="{{achievement.url}}" target="_blank">
+                    <img class="achievement-img" ng-src="/img/achievements/icons/{{achievement.icon}}"/>
+                </a>
+            <div class="achievement-title">
+                <h2>{{achievement.title}}</h2>
+            </div>
+            <div class="achievement-description">
+                <h3>{{achievement.description}}</h3>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,18 +1,27 @@
 (function() {
 	var app = angular.module('skills', []);	
-	
+
+    var categories = {
+        'coding' : '#35235D',
+        'testing': '#DB2464',
+        'soft':'#32742C',
+        'ux':'#4C49A2',
+        'language':'#A31A48'
+    };
+
 	var createSkillImprovement = function(category, technology, classification, before, after) {
 		var values = {
 			zero: 0,
-			'very-low': 10,
-			low : 25,
+			'very-low': 20,
+			low : 40,
 			medium: 50,
 			high: 80,
-			'very-high': 90			
+			'very-high': 2
 		};
 		
 		return {
 			category: category,
+            color: categories[category],
 			technology: technology,
 			classification: classification,
 			before: values[before],
@@ -52,8 +61,6 @@
 				createSkillImprovement('language','Portuguese','P2', 'high', 'high'),
 				createSkillImprovement('language','English','P2', 'high', 'very-high'),
 				createSkillImprovement('language','Portunhol/Spanish','P2', 'very-low', 'medium'),
-				createSkillImprovement('language','German (still zero!)','P2', 'zero', 'zero')
-				
 			];
 		}
 	});

@@ -5,6 +5,24 @@
         this.get = function () {
             return [
                 {
+                    author: 'Lourenço Soares',
+                    url: 'https://jigsaw.thoughtworks.com/consultants/12903',
+                    description: 'Business Analyst / Idea Generator',
+                    picture: 'lourenco',
+                    content: [
+                        "Ajudou, junto com o Portela, a evitar que o programa de Aprendizes morresse depois que a Lizi e a Luisa tiveram que abandonar a iniciativa. Assumiu a bronca em um momento dificílimo, com muito pouco contexto e substituindo gente que tinha feito um bom trabalho. Rapidamente estabeleceu um relacionamento de confiança com os aprendizes e utilizou a experiência anterior de educação para gerar conteúdo relevante para eles. O maior feedback vem dos próprios aprendizes, que te citaram pelo nome em 2 ocasiões seguidas. Uma das partes mais legais foi a importância que tu deu ao projeto, tu SEMPRE estava lá e pronto na hora que precisava."
+                    ]
+                },
+                {
+                    author: 'Vinicius Mello',
+                    url: 'https://jigsaw.thoughtworks.com/consultants/14822',
+                    description: 'People Support - POA',
+                    picture: 'vinicius',
+                    content: [
+                        "O Romulo com seu jeito descontraido fazendo a galera ficar mais solta, mas sempre apurado nos seus conhecimentos no que tange a parte técnica do negócio."
+                    ]
+                },
+                {
                     author: 'Thais Hamilton',
                     url: 'https://jigsaw.thoughtworks.com/consultants/15871',
                     description: 'Cloud Control Panel Developer',
@@ -39,9 +57,7 @@
                     picture: 'pamela',
                     content: [
                         "Your impact on the rails girls event was really noticeable, there was a moment were all the girls applauded you, I think that shows it.",
-                        "You make people feel really comfortable around you, you are very good at explaining complicated things in a way that's easy to understand.",
-                        "You should speak more in public, you are very good at that, since you are also very good at coaching people, maybe you could think about being a TWU coach.",
-                        "The way you help new people feel comfortable in our environment is really helpful, I see you helping many people and I think it's really helpful."
+                        "The way you help new people feel comfortable in our environment is really helpful, I see you helping many people and I think that's really good."
                     ]
                 },
                 {
@@ -50,7 +66,7 @@
                     description: 'Aceleradora de Software',
                     picture: 'leonardo',
                     content: [
-                        "E aí, Rômulo! Cara, quero te parabenizar pela apresentação na aceleradora, foi muito legal mesmo. Além de tudo, o Froes e tu mostraram um comprometimento com a profissão que, pra mim, foi super motivacional, me deu muita vontade de aprender e ser um ótimo dev. Parabéns mesmo!"
+                        "HI, Rômulo! I just want to congratulate you for the presentation at the aceleradora, it was really really cool, and you and Froes showed commitment to the profession that, to me, was super motivating, it gave me lot of will to learn how to be a great dev. Congratulations seriously!"
                     ]
                 },
                 {
@@ -109,27 +125,7 @@
                     content: [
                         "You are in this project for a short time and you already knows a lot of stuff, you learn quickly, that's very cool"
                     ]
-                },
-                {
-                    author: 'Vinicius Mello',
-                    url: 'https://jigsaw.thoughtworks.com/consultants/14822',
-                    description: 'People Support - POA',
-                    picture: 'vinicius',
-                    content: [
-                        "O Romulo com seu jeito descontraido fazendo a galera ficar mais solta, mas sempre apurado nos seus conhecimentos no que tange a parte técnica do negócio."
-                    ]
-                },
-                {
-                    author: 'Lourenço Soares',
-                    url: 'https://jigsaw.thoughtworks.com/consultants/12903',
-                    description: 'Business Analyst / Idea Generator',
-                    picture: 'lourenco',
-                    content: [
-                        "Ajudou, junto com o Portela, a evitar que o programa de Aprendizes morresse depois que a Lizi e a Luisa tiveram que abandonar a iniciativa. Assumiu a bronca em um momento dificílimo, com muito pouco contexto e substituindo gente que tinha feito um bom trabalho. Rapidamente estabeleceu um relacionamento de confiança com os aprendizes e utilizou a experiência anterior de educação para gerar conteúdo relevante para eles. O maior feedback vem dos próprios aprendizes, que te citaram pelo nome em 2 ocasiões seguidas. Uma das partes mais legais foi a importância que tu deu ao projeto, tu SEMPRE estava lá e pronto na hora que precisava."
-                    ]
                 }
-
-
             ];
         }
     });
