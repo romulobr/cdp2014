@@ -51,7 +51,7 @@
 
 				createSkillImprovement('language','Portuguese','P2', 'high', 'high'),
 				createSkillImprovement('language','English','P2', 'high', 'very-high'),
-				createSkillImprovement('language','Spanish','P2', 'very-low', 'medium'),
+				createSkillImprovement('language','Portunhol/Spanish','P2', 'very-low', 'medium'),
 				createSkillImprovement('language','German (still zero!)','P2', 'zero', 'zero')
 				
 			];

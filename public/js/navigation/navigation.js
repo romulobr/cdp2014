@@ -1,5 +1,5 @@
 (function() {
-	var app = angular.module('pr2014', ['ngRoute','ngAnimate','skills']);
+	var app = angular.module('pr2014', ['ngRoute','ngAnimate','skills','feedbacks']);
 	var partials = {
 		home: '/js/navigation/home.html',
 		achievements: '/js/partials/achievements.html',
@@ -21,7 +21,8 @@
 	        templateUrl: 'js/achievements/list.html'
 	      }).	      
 	      when('/feedbacks', {
-	        templateUrl: 'js/feedbacks/list.html'
+	        templateUrl: 'js/feedbacks/list.html',
+	        controller: 'FeedbackController'
 	      }).
 	      when('/actions', {
 	        templateUrl: 'js/actions/list.html'
