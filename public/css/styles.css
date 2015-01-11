@@ -1,121 +1,40 @@
-/* 
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
-Twitter: @rich_clark
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    font-family: 'Rokkitt', serif;
-    vertical-align:baseline;
-    background:transparent;
-}
-
 body {
-    line-height:1;
-    /*background-image: url(/images/tree.jpg);*/
-    /*background-size: 900px;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: bottom right;*/
-
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
-    display:block;
-}
-
-nav ul {
-    list-style:none;
-}
-
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000; 
-    font-style:italic;
-    font-weight:bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;   
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-
-input, select {
-    vertical-align:middle;
+    background-image: url('/images/background.jpg');
+    background-size: 100%;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0 10px 0 10px;
 }
 
 .header {
     margin: 10px;
 }
 
-.header h1 {
-    margin:8px;
-    font-size: 3em;
+.info h1 {
+    color:white;
+    font-size: 2em;
+    padding-right: 2px;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
 }
 
+.info h2,h3 {
+    color:white;
+    box-shadow:2px;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
+
+.info h1::after {
+    display:block;
+    width:100%;
+    border-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.8);;
+    border-width: 2px;
+    height: 3px;
+
+    content:'';
+}
 .level {
     /*font-size:0.7em;*/
     padding-left: 10px;
@@ -152,7 +71,7 @@ input, select {
 }
 
 .footer img {
-    width: 300px;    
+    width: 300px;
 }
 
 .circular {
@@ -162,16 +81,14 @@ input, select {
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
     background: url(../img/profile-picture.jpg) no-repeat;
-    float: left;    
+    float: left;
 }
 
 .info {
     font-size: 2em;
     display: block;
     float: left;
-    width: 80%;
-    margin-left: 30;
-    margin-top: 0;
+    width: 100%;
 }
 
 .clearfix:after {
@@ -180,67 +97,26 @@ input, select {
   content: "";
 }
 
-.menu {
-    text-align: center;
-    font-size: 2em;
-    margin: 10px;
-    width: 60%;
-    z-index: 900;
-    width: 200px;
-    float: left;
-    display: block;    
-}
-
-.menu ul {
-    list-style-type: none;
-}
-
-.menu ul li a{
-    font-family: 'Rokkitt', serif;
-    display: block;
-    width: 200px;
-    margin: 0px;
-    font-size: 1em;
-    border-style:solid;
-    border-width: 2px;
-    border-color: white;
-    text-decoration: none;
-    color:black;
-}
-
-
-.menu ul li a:hover{
-    font-family: 'Rokkitt', serif;
-    display: block;
-    color: black;
-    background-color: orange;
-    width: 200px;
-    margin: 0px;
-    font-size: 1em;
-    border-style:solid;    
-    border-width: 2px;
-}
-
 progress[value] {
     /* Get rid of the default appearance */
     appearance: none;
-    
+
     /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
     border: none;
-    
+
     /* Add dimensions */
     width: 100%; height: 20px;
-    
+
     /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
       background-color: whiteSmoke;
       border-radius: 3px;
       box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-    
+
     /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
     color: royalblue;
-    
+
     position: relative;
-    margin: 0 0 1.5em; 
+    margin: 0 0 1.5em;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -252,10 +128,10 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-  background-color: orange;       
-       
+  background-color: orange;
 
-    border-radius: 2px; 
+
+    border-radius: 2px;
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
@@ -341,7 +217,33 @@ progress[value]::-webkit-progress-value {
 
 .achievement-img-containner {
     display: block;
+    float: none;
+}
+
+.achievement {
+    margin-left: 100px;
+}
+
+.option h1 a{
+    color:white;
+    text-decoration: none;
+}
+
+.option {
+    background-color:rgba(0,0,30,0.75);
+    border-color:rgba(0,0,30,0.5);
+    border-style: solid;
+    padding:10px;
+    width:600px;
+    height:600px;
     float: left;
+    margin: 10px;
+    color:white;
+}
+
+.option::hover {
+    background-color:black;
+    color:white;
 }
 
 #footer {
@@ -355,3 +257,13 @@ progress[value]::-webkit-progress-value {
     background-size:100%;
 }
 #footer img {width:100%;}
+
+.panel{
+    background-color:rgba(0,0,30,0.75);
+    border-color:rgba(0,0,30,0.5);
+    border-style: solid;
+}
+
+.panel-body{
+    color: white;
+}
