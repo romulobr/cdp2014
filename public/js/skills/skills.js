@@ -1,12 +1,12 @@
 (function() {
-	var app = angular.module('skills', []);	
+	var app = angular.module('skills', []);
 
     var categories = {
-        'coding' : '#35235D',
-        'testing': '#DB2464',
-        'soft':'#32742C',
-        'ux':'#4C49A2',
-        'language':'#A31A48'
+        'coding' : '#FCF685',
+        'testing': '#ffcb00',
+        'soft':'#B962A4',
+        'ux':'#865FAA',
+        'language':'#0bfbdb'
     };
 
 	var createSkillImprovement = function(category, technology, classification, before, after) {
@@ -18,7 +18,7 @@
 			high: 80,
 			'very-high': 2
 		};
-		
+
 		return {
 			category: category,
             color: categories[category],
@@ -27,7 +27,7 @@
 			before: values[before],
 			after: values[after]
 		};
-	};	
+	};
 
 	app.service("allSkills", function (){
 		this.get = function () {
@@ -45,7 +45,7 @@
 				createSkillImprovement('testing','Capybara','P2', 'none', 'low'),
 				createSkillImprovement('testing','Web Driver','P2', 'low', 'medium'),
 				createSkillImprovement('testing','Testing strategies','P2', 'medium', 'high'),
-				
+
 				createSkillImprovement('soft','Communication','P2', 'medium', 'very-high'),
 				createSkillImprovement('soft','Presenting','P2', 'low', 'high'),
 				createSkillImprovement('soft','Problem Solving','P2', 'low', 'medium'),
@@ -65,7 +65,13 @@
 		}
 	});
 
-	app.controller('SkillController', ['allSkills', function(allSkills){		
+	app.controller('SkillController', ['allSkills', function(allSkills){
 		this.skills = allSkills.get();
+		this.categories = _.reduce(_.keys(categories),
+			function (result, key) {
+			result.push({description: key, color: categories[key]});
+			console.log('after', result);
+			return  result;
+		},[]);
 	}]);
 })();

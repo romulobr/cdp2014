@@ -1,16 +1,20 @@
-<h1>Achievements</h1>
+<a href="/"><h1>Achievements</h1></a>
 
 <div ng-controller="AchievementController as controller">
-        <div ng-repeat="achievement in controller.achievements" class="col-sm-4">
-                <a href="{{achievement.url}}" target="_blank">
+
+        <div ng-repeat="achievement in controller.achievements">
+        <a href="{{achievement.url}}" target="_blank">
+            <div class="panel col-sm-5 achievement">
+                <div class="panel-body">
                     <img class="achievement-img" ng-src="/img/achievements/icons/{{achievement.icon}}"/>
-                </a>
-            <div class="achievement-title">
-                <h2>{{achievement.title}}</h2>
+                    <div class="achievement-title">
+                        <h2>{{achievement.title}}</h2>
+                    </div>
+                    <div class="achievement-description">
+                        <h3>{{achievement.description}}</h3>
+                    </div>
+                </div>
             </div>
-            <div class="achievement-description">
-                <h3>{{achievement.description}}</h3>
-            </div>
+        </a>
         </div>
     </div>
-</div>
