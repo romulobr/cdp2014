@@ -13,6 +13,9 @@
                 when('/', {
                     templateUrl: partials.home
                 }).
+                when('/home', {
+                    templateUrl: partials.home
+                }).
                 when('/skills', {
                     templateUrl: 'js/skills/list.html',
                     controller: 'SkillController'
