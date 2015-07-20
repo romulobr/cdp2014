@@ -1,0 +1,11 @@
+<div ng-controller="AchievementsController as controller">
+	<ul class = "achievements-list">
+	<li ng-repeat="achievement in controller.achievements">
+		<div class="achievement-box">
+		<spam class="title"> {{achievement.title}} </spam>
+		<img class="achievement-img" ng-src="{{achievement.picture}}"/>
+		<spam class="description"> {{achievement.description}} </spam>		
+		</div>
+	</li>
+	</ul>
+</div>

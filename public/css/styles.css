@@ -1,294 +1,63 @@
-body {
-    background-image: url('/images/background.jpg');
-    background-size: 100%;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 0 10px 0 10px;
+.content {
+	width: 100%;
+	padding:0;
+	margin:auto;
+	background-color: #005B91;
 }
 
-.header {
-    margin: 10px;
+.top-header {
+	width: 100%;
+	height: 30px;
+	text-align: right;
+	background-color: #005B91;
+	color:white;
+	font-size: 1.5em;
+	padding-top: 5px;
 }
 
-.info h1 {
-    color:white;
-    font-size: 2em;
-    padding-right: 2px;
-    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+.achievements-list {
+	display: flex;
+	flex-flow: wrap;
+	width:100%;
 }
 
-.info h2,h3 {
-    color:white;
-    box-shadow:2px;
-    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+.achievements-list li {
+	list-style: none;
+	max-width:25%;
+	background-color: #0078bf;
 }
 
-.info h1::after {
-    display:block;
-    width:100%;
-    border-color: rgba(255,255,255,0.5);
-    background-color: rgba(255,255,255,0.8);;
-    border-width: 2px;
-    height: 3px;
-
-    content:'';
-}
-.level {
-    /*font-size:0.7em;*/
-    padding-left: 10px;
-    padding-right: 10px;
-    color: orange;
-    background-color: black;
+.achievement-box {
+	padding: 2px;
+	border: solid #005B91 4px;
 }
 
-.photo-box{
-    width: 200px;
-    float: left;
+.achievements-list li spam.title {
+	font-size: 0.9em;
+	height: 20px;
+	padding:2px;
+	text-align: right;
+	background-color: #004771;
+	color:white;
+	display:block;
+		font-variant: all-small-caps;
 }
 
-.photo-box img {
-    border-color: black;
-    border-style: solid;
-    border-width: 6px;
-    float: left;
-    width: 190px;
-    height: 190px;
-    margin: 6px;
+.achievements-list li spam.description {
+	font-size: 0.7em;
+	height: 30px;
+	text-overflow: clip: 
+	padding:4px;
+	text-align: center;
+	font-variant: all-small-caps;
+
+	background-color: #0078bf;
+	color:white;
+	display:block;
 }
 
-.stats {
-    margin-left: 10px;
-    float: left;
-}
-
-.footer {
-    float: right;
-    position:fixed;
-    bottom:10px;
-    right:0px;
-}
-
-.footer img {
-    width: 300px;
-}
-
-.circular {
-    width: 300px;
-    height: 300px;
-    border-radius: 150px;
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
-    background: url(../img/profile-picture.jpg) no-repeat;
-    float: left;
-}
-
-.info {
-    font-size: 2em;
-    display: block;
-    float: left;
-    width: 100%;
-}
-
-.clearfix:after {
-  display: block;
-  clear: both;
-  content: "";
-}
-
-progress[value] {
-    /* Get rid of the default appearance */
-    appearance: none;
-
-    /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
-    border: none;
-
-    /* Add dimensions */
-    width: 100%; height: 20px;
-
-    /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
-      background-color: whiteSmoke;
-      border-radius: 3px;
-      box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-
-    /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
-    color: royalblue;
-
-    position: relative;
-    margin: 0 0 1.5em;
-}
-
-progress[value]::-webkit-progress-bar {
-  background-color: white;
-  border-radius: 1px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-}
-
-progress[value]::-webkit-progress-value {
-  background-color: orange;
-
-
-    border-radius: 2px;
-    background-size: 35px 20px, 100% 100%, 100% 100%;
-}
-
-.animated-transition {
-  position:relative;
-}
-
-.animated-transition.ng-enter, .animated-transition.ng-leave {
-  -webkit-transition:0.5s linear all;
-  transition:0.5s linear all;
-  top:0;
-}
-
-.animated-transition.ng-enter {
-  top:0;
-  z-index:100;
-  opacity:0;
-}
-.animated-transition.ng-enter.ng-enter-active {
-  opacity:1;
-}
-
-.animated-transition.ng-leave {
-  opacity:1;
-}
-
-.animated-transition.ng-leave.ng-leave-active {
-  opacity:0;
-  height: 0;
-}
-
-.feedback {
-    font-size: 0.7em;
-    float: left;
-}
-
-.feedback-content {
-    text-align: center;
-    height: 150px;
-    margin-bottom: 40px;
-}
-
-.feedback-content {
-    float: none;
-}
-
-.feedback-img-containner {
-    display: block;
-    float: left;
-}
-
-.feedback-img {
-    max-height:300px;
-    border-radius: 300px;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(50%); /* Chrome 19+ & Safari 6+ */
-    margin: 20px;
-    float: left;
-}
-
-.feedback img:hover {
-    filter: none;
-    -webkit-filter: grayscale(0%);
-}
-.small {
-    font-size: 0.6em;
-}
-
-.achievement-img {
-    width: 150px;
-    height: 150px;
-    border-style: solid;
-    border-color: #222222;
-    border-width: 1px;
-    border-radius: 5%;
-    margin: 10px;
-    float: left;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(50%); /* Chrome 19+ & Safari 6+ */
-}
-
-.achievement-img-containner {
-    display: block;
-    float: none;
-}
-
-.achievement {
-    margin-left: 100px;
-    transition: 500ms linear;
-    border-width: 3px;
-}
-
-.achievement:hover {
-    background-color:black;
-    color:white;
-    background-color:rgba(0,0,30,0.9);
-    border-color:rgba(173,208,210,1);
-    border-style:solid;
-    border-color:rgba;
-    transition: 1000ms linear;
-}
-
-.options {
-    padding-left:34px;
-}
-.option h1 a{
-    color:white;
-    text-decoration: none;
-}
-
-.option {
-    background-color:rgba(0,0,30,0.75);
-    border-color:rgba(0,0,30,0.8);
-    border-style: solid;
-    padding:10px;
-    width:31.25%;
-    height:46.296296296%;
-    float: left;
-    margin-right: 1.041666666%;
-    margin-top:12%;
-
-    color:white;
-    border-width: 3px;
-    border-radius: 10px;
-    transition: 500ms linear;
-}
-
-.option:hover {
-    background-color:black;
-    color:white;
-    background-color:rgba(0,0,30,0.9);
-    border-color:rgba(173,208,210,1);
-    border-style:solid;
-    border-color:rgba;
-    transition: 1000ms linear;
-}
-
-#footer {
-    position:fixed;
-    right:0;
-    bottom:0;
-    margin:0;
-    width:75%;
-    height:75%;
-    background:url(../images/tree.jpg) no-repeat bottom right;
-    background-size:100%;
-}
-#footer img {width:100%;}
-
-.panel{
-    background-color:rgba(0,0,30,0.75);
-    border-color:rgba(0,0,30,0.5);
-    border-style: solid;
-}
-
-.panel-body{
-    color: white;
+.achievements-list li img{
+	width:100%;
+	max-height: 300px;
+	display:block;
 }
