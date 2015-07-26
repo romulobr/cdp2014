@@ -1,11 +1,53 @@
 <div ng-controller="AchievementsController as controller">
-	<ul class = "achievements-list">
-	<li ng-repeat="achievement in controller.achievements">
-		<div class="achievement-box">
-		<spam class="title"> {{achievement.title}} </spam>
-		<img class="achievement-img" ng-src="{{achievement.picture}}"/>
-		<spam class="description"> {{achievement.description}} </spam>		
-		</div>
-	</li>
+	<div class="top-header achievements">
+		<h1>Conquistas</h1>
+	</div>
+	<ul class = "achievements-list" >
+		<li ng-repeat="achievement in controller.achievements">
+			<div class="achievement-box">
+			<spam class="title"> {{achievement.title}} </spam>
+			<img class="achievement-img" ng-src="{{achievement.picture}}"/>
+			<spam class="description"> {{achievement.description}} </spam>		
+			</div>
+		</li>	
 	</ul>
+	<div class="top-header sponsees">
+		<h1>Sponsees & Coaching</h1>
+	</div>
+	<ul class = "achievements-list">
+		<li ng-repeat="sponsee in controller.sponsees" class="sponsee">
+			<div class="sponsee-box">
+			<spam class="title"> {{sponsee.name}} </spam>
+			<img class="achievement-img" ng-src="{{sponsee.picture}}"/>
+			<spam class="description"> {{sponsee.description}} </spam>		
+			</div>
+		</li>
+	</ul>
+	
+	<div class="top-header learning">
+		<h1>Aprendizado</h1>
+	</div>
+	<ul class = "achievements-list">
+		<li ng-repeat="learning in controller.learning" class="learning">
+			<div class="learning-box">
+			<spam class="title"> {{learning.name}} </spam>
+			<img class="achievement-img" ng-src="{{learning.picture}}"/>
+			<spam class="description"> {{learning.description}} </spam>		
+			</div>
+		</li>
+	</ul>	
+		
+	<div class="top-header learning">
+		<h1>Feedbacks</h1>
+	</div>
+	<ul class = "feedbacks-list">
+		<li ng-repeat="feedback in controller.feedbacks" class="learning">
+			<div class="feedback-box">
+			<div class="feedback-image-box">
+				<img class="feedback-img" ng-src="{{feedback.picture}}"/>
+				<spam class="title"> {{feedback.name}} </spam>
+			</div>			
+			<spam class="feedback-description"> {{feedback.description}} </spam>
+		</li>
+	</ul>	
 </div>

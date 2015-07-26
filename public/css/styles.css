@@ -15,7 +15,20 @@
 	padding-top: 5px;
 }
 
+.sponsees {
+	background-color: #005B91;
+	color:white;
+	padding-top:20px;
+	height: auto;
+	margin-top:20px;
+}
+
+.learning {
+		margin-top: 20px;	
+}
+
 .achievements-list {
+	background-color: #005B91;
 	display: flex;
 	flex-flow: wrap;
 	width:100%;
@@ -27,10 +40,52 @@
 	background-color: #0078bf;
 }
 
+
+.achievements-list li.sponsee {
+	list-style: none;
+	max-width:14.2857142857143%;
+	background-color: #0078bf;
+}
+
+.achievements-list li.learning {
+	list-style: none;
+	max-width:25%;
+	background-color: #0078bf;
+}
+
+.achievements-list li.learning spam.title{
+	font-size: 0.5em;
+	height: 20px;
+	padding:2px;
+	text-align: center;
+	background-color: #004771;
+	color:white;
+	font-variant: all-small-caps;
+}
+
+.achievements-list li.sponsee spam.title{
+	font-size: 0.8em;
+	height: 20px;
+	padding:2px;
+	text-align: center;
+	background-color: #004771;
+	color:white;
+	font-variant: all-small-caps;
+}
+
 .achievement-box {
 	padding: 2px;
 	border: solid #005B91 4px;
 }
+
+.learning-box {
+			border: solid #005B91 4px;
+}
+
+.sponsee-box {
+			border: solid #005B91 1px;
+}
+
 
 .achievements-list li spam.title {
 	font-size: 0.9em;
@@ -56,8 +111,56 @@
 	display:block;
 }
 
+.achievements-list li.learning spam.description, .achievements-list li.sponsee spam.description {
+	font-size: 0.7em;
+	height: 0px;
+	text-overflow: clip: 
+	text-align: center;
+	font-variant: all-small-caps;
+
+	background-color: #0078bf;
+	color:white;
+	display:block;
+}
+
 .achievements-list li img{
 	width:100%;
 	max-height: 300px;
 	display:block;
+}
+
+.achievements-list li.sponsee img{
+	width:100%;
+	max-height: 500px;
+	display:block;
+}
+
+.feedbacks-list {
+	color:white;
+	width: 100%;
+}
+
+.feedback-box{
+	width: 100%;
+	height: 200px;
+	display: flex;
+	font-size: 1.5em;
+}
+
+.feedback-description {
+	width:80%;
+	padding-left: 20px;
+}
+
+.feedback-image-box {
+	width: 200px;
+}
+
+.feedback-image-box img {
+	max-height:150px;
+}
+
+.feedback-image-box spam {
+  font-size: 0.8em;
+	text-align: center;
 }

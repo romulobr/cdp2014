@@ -71,7 +71,7 @@
                 },                                
                 {
                     title: 'Dev in Company',
-                    description: 'Apresentação da ferramenta para o cliente',
+                    description: 'Apresentação sobre TDD',
                     picture: 'img/achievements/dev-in-company.png'
                 },
                 {
@@ -100,35 +100,145 @@
                     picture: 'img/achievements/p3.png'
                 },
                 {
-                    title: 'Ec. Injustice Awareness',
-                    description: 'Campanha Global - (sono perdido)',
+                    title: 'Economic Injustice Awareness',
+                    description: 'Campanha Global',
                     picture: 'img/achievements/injustice.png'
                 },
                 {
-                    title: 'Feedback NHO',
+                    title: 'Orientação a Novos Recrutados',
                     description: 'Feedback',
                     picture: 'img/achievements/feedback.png'
                 },                
                 {
-                    title: 'Lego Game NHO',
-                    description: 'Feedback',
+                    title: 'Orientação a Novos Recrutados',
+                    description: 'Lego Game',
                     picture: 'img/achievements/lego-game.png'
                 },
                 {
                     title: 'Workshop de Inception',
-                    description: 'Feedback',
+                    description: 'Papel do cliente',
                     picture: 'img/achievements/inception.png'
                 },
                 {
                     title: 'Mês LGBT',
-                    description: 'Ajuda na organização pré-evento',
-                    picture: 'img/achievements/checklist.png'
+                    description: 'Ajuda no planejamento e organização pré-evento',
+                    picture: 'img/achievements/lgbt.png'
                 },                
             ];
         }
     });
 
-    app.controller('AchievementsController', ['allAchievements', function (allAchievements) {
+    app.service("allSponsees", function () {
+        this.get = function () {
+            return [
+                {
+                    name: 'Luana',                    
+                    picture: 'img/achievements/luana.png'
+                },
+                {
+                    name: 'Ramon',
+                    picture: 'img/achievements/ramon.png'
+                },                
+                {
+                    name: 'Melina',
+                    picture: 'img/achievements/melina.png'
+                },
+                {
+                    name: 'Bruno Leite',
+                    picture: 'img/achievements/bruno.png'
+                },                
+                {
+                    name: 'Francieli',
+                    picture: 'img/achievements/francieli.png'
+                },
+                {
+                    name: 'Juliana',
+                    picture: 'img/achievements/juliana.png'
+                },                
+                {
+                    name: 'Patrick',
+                    picture: 'img/achievements/patrick.png'
+                }                            
+            ];
+        }
+    });
+
+    app.service("allLearning", function () {
+        this.get = function () {
+            return [
+                {
+                    name: 'Building Microservices',                    
+                    picture: 'img/achievements/microservices.png'
+                },
+                {
+                    name: 'Clean Code & The Cleaner Code',
+                    picture: 'img/achievements/clean-code.png'
+                },                
+                {
+                    name: 'Graphic Design - The new Basics',
+                    picture: 'img/achievements/design.png'
+                },
+                {
+                    name: 'Non Violent Communication',
+                    picture: 'img/achievements/non-violent-communication.png'
+                },
+                {
+                    name: 'Javascript Patterns',
+                    picture: 'img/achievements/javascript-patterns.png'
+                },                
+                {
+                    name: 'CSS and Documents',
+                    picture: 'img/achievements/css-documents.png'
+                },
+                {
+                    name:'Daring Greatly',
+                    picture: 'img/achievements/daring-greatly.png'
+                }
+            ];
+        }
+    });
+
+    app.service("allFeedbacks", function () {
+        this.get = function () {
+            return [
+                {
+                    name: 'Simba',
+                    description: "You're a really brilliant and experienced developer, always keen to listen and always up for a technical discussion.",
+                    picture: 'img/achievements/simba.png'
+                },
+                {
+                    name: 'Stacey Watro',
+                    description: 'It was easy to see that his is a natural leader. Our team was not in an easy position. We had many new ThoughtWorks working on a big project that was not use to off-shore teams. Romulo worked hard to balance delivering software, teaching new team members, and making the client feel comfortable with an offshore team.',
+                    picture: 'img/achievements/stacey.png'
+                },                
+                {
+                    name: 'Fábio Pio',
+                    description:"Companheirismo: Sinto em você um grande companheiro de time, não somente para mim, mas também para os demais membros. Sempre que lhe procuramos com alguma dúvida e/ou dificuldade, você sempre se mostra pronto para ajudar, isso não se limita apenas aos assuntos de projeto.",
+                    picture: 'img/achievements/fabio.png'
+                },                
+                {
+                    name: 'Flávia - PM Ducktales',
+                    description: 'um pilar de segurança para o time (   22e é fofinho)',
+                    picture: 'img/achievements/flavia.png'
+                },                
+                {
+                    name: 'Denise Notini (BA - Ducktales)',
+                    description: "tem uma visão sistêmica muito boa",
+                    picture: 'img/achievements/denise.png'
+                },
+                {
+                    name:'Carlos Vilela - Lenda viva',
+                    description: "O Rômulo fez tanto pelo psicológico de times inteiros da TW que devia ter o título de People Partner honorário e vitalício",
+                    picture: 'img/achievements/cv.png'
+                }
+            ];
+        }
+    });
+
+    app.controller('AchievementsController', ['allAchievements','allSponsees','allLearning','allFeedbacks', function (allAchievements, allSponsees, allLearning, allFeedbacks) {
         this.achievements = allAchievements.get();
+        this.sponsees = allSponsees.get();
+        this.learning = allLearning.get();
+        this.feedbacks = allFeedbacks.get();
     }]);
 })();
